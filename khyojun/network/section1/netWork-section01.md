@@ -135,7 +135,7 @@ ex) 초기 출발 후 :800ms 다시 돌아오는 시간 : 900ms 레이턴시: 1.
 네트워크 토폴로지가 중요한 이유는 바로 `병목 현상`이라는 것을 찾을 때 중요한 기준이 되기 때문이다.
 
 ### 병목 현상
-<img src="../../../Downloads/bottleneck.webp" width="300" >
+<img src="bottleneck.webp" width="300" >
 
 
 > 병목(bottle neck) 현상은 전체 시스템의 성능이나 용량이 하나의 구성 요소로 인해 제한을 받는 현상이다.
