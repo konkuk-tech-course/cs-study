@@ -192,5 +192,8 @@ IP가 완전히 연결되어 도착하는 것을 보장하지 않는다. 따라�
 <a name="virtual-packet-switching">https://woovictory.github.io/2018/12/28/Network-Packet-Switching-Method/#:~:text=%EA%B0%80%EC%83%81%ED%9A%8C%EC%84%A0%20%ED%8C%A8%ED%82%B7%20%EA%B5%90%ED%99%98%20%EB%B0%A9%EC%8B%9D&text=(%EC%97%B0%EA%B2%B0%20%EC%A7%80%ED%96%A5%ED%98%95)%20%EA%B0%81%20%ED%8C%A8%ED%82%B7%EC%97%90%EB%8A%94,%EB%95%8C%20%ED%95%9C%20%EB%B2%88%EB%A7%8C%20%EC%88%98%ED%96%89%ED%95%9C%EB%8B%A4.</a>
 <a name="datagram-packet-switching">https://woovictory.github.io/2018/12/28/Network-Packet-Switching-Method/#:~:text=%EA%B0%80%EC%83%81%ED%9A%8C%EC%84%A0%20%ED%8C%A8%ED%82%B7%20%EA%B5%90%ED%99%98%20%EB%B0%A9%EC%8B%9D&text=(%EC%97%B0%EA%B2%B0%20%EC%A7%80%ED%96%A5%ED%98%95)%20%EA%B0%81%20%ED%8C%A8%ED%82%B7%EC%97%90%EB%8A%94,%EB%95%8C%20%ED%95%9C%20%EB%B2%88%EB%A7%8C%20%EC%88%98%ED%96%89%ED%95%9C%EB%8B%A4.</a>
 <a name="ethernet-frame">http://www.ktword.co.kr/test/view/view.php?m_temp1=2965</a>
+
+참고할 사이트
+ :https://www.geeksforgeeks.org/difference-between-datagram-switching-virtual-circuit/
 </div>
 </details>
