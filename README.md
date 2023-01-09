@@ -2,9 +2,11 @@
 
 ### 목표 : 네트워크, 데이터베이스, 운영체제와 자료구조에 대한 넓고 얕은 지식 제고
 
-### 참여자 : [김효준](https://github.com/khyojun), [황준호](https://github.com/juno-junho), [정동규](https://github.com/yummygyudon)
+### 참여자 : [김효준](https://github.com/khyojun), [황준호](https://github.com/juno-junho), [전하영](https://github.com/ha0day)
 
 ### 기간 : 12. 26. 22 ~ 진행중
+ - [x] 네트워크 12. 26. 22 ~ 01. 07. 23
+ - [ ] 운영체제 01. 09. 23 ~ 진행중
 
 ### Rule
 
