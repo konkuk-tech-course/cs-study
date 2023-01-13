@@ -22,7 +22,7 @@
 
 
 > - 프로그램 계수기(PC, Program Counter):	다음에 실행할 명령어(instruction)의 주소를 가지고 있는 레지스터
-> - 누산기(AC, ACcumulator):	연산 결과 데이터를 일시적으로 저장하는 레지스터
+> - 누산기(AC, Accumulator):	연산 결과 데이터를 일시적으로 저장하는 레지스터
 > - 명령어 레지스터(IR, Instruction Register):	현재 수행 중인 명령어를 가지고 있는 레지스터
 > - 상태 레지스터(SR, Status Register): 현재 CPU의 상태를 가지고 있는 레지스터
 > - 메모리 주소 레지스터(MAR, Memory Address Register): 메모리로부터 읽어오거나 메모리에 쓰기 위한
@@ -196,11 +196,9 @@
 
 
 
-
 ### 요구 페이징 기법
 
 그런데 우리가 보면 그런 말이 또 있다. **전체 프로세스가 필요한 것보다 실행에만 필요한 프로세스만 사용하면 된다.** 여기서 말 그대로 요구 페이징이라는 것은 진짜 내가 당장 사용해야하는 페이지들만 올리는 방식이다.
-
 따라서 특정 페이지에 대한 CPU의 요청이 들어온 뒤 해당 메모리를 적재한다.
 
 그러면 장점은 어떤 것이 있을까?
@@ -217,7 +215,6 @@
 
 그래서 아까 필요한 친구만 올려놓는다고 했는데 그 기준을 *유효/무효 비트(valid/invalid bit)를 두어 각 page가 메모리에 존재하는지 표시하게 된다. 만약 찾고자 하는 친구가 무효 비트를 나타내면 페이지 폴트를 일으킨다.
 >*유효/무효 비트 : 해당 비트가 유효하면 메모리에 있음을 의미하고, 무효하면 메모리에 없음을 의미합니다.
-
 
 
 ### 스와핑
@@ -505,3 +502,8 @@ TLB는 굉장히 비싸다. 그래서 속도는 빠르지만 용량은 되게 �
 - [가상 메모리](https://velog.io/@chappi/OS%EB%8A%94-%ED%95%A0%EA%BB%80%EB%8D%B0-%ED%95%B5%EC%8B%AC%EB%A7%8C-%ED%95%A9%EB%8B%88%EB%8B%A4.-14%ED%8E%B8-%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B0%9C%EC%9A%94-%ED%8E%98%EC%9D%B4%EC%A7%95)
 - [스레싱](https://zangzangs.tistory.com/144#:~:text=%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EA%B0%80%20%EC%A7%91%EC%A4%91%EC%A0%81%EC%9C%BC%EB%A1%9C%20%EC%82%AC%EC%9A%A9,%EC%9D%84%20%EC%8A%A4%EB%A0%88%EC%8B%B1%EC%9D%B4%EB%9D%BC%EA%B3%A0%20%ED%95%A9%EB%8B%88%EB%8B%A4)
 - [페이지 교체 알고리즘](https://doh-an.tistory.com/28#:~:text=%F0%9F%92%A1%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B5%90%EC%B2%B4%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&text=%ED%8E%98%EC%9D%B4%EC%A7%95%20%EA%B8%B0%EB%B2%95%EC%9C%BC%EB%A1%9C%20%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC,%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B5%90%EC%B2%B4%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%B4%EB%9D%BC%EA%B3%A0%20%ED%95%9C%EB%8B%A4)
+
+
+
+
+
