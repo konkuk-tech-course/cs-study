@@ -117,9 +117,9 @@ printf함수의 원형만 복사를 해온거지 구현이 되어있는 것이 �
 상태가 너무 많다. 하나씩 알아보자.
 
 
-<img src="processState.png">
+<img src="processstate.JPG">
 
-사진 출처 : https://afteracademy.com/blog/what-is-long-term-short-term-and-medium-term-scheduler
+사진 출처 : http://itnovice1.blogspot.com/2019/08/blog-post_64.html
 
 ### 생성(New)
 > 프로세스가 생성된 상태를 의미하는데 OS에 프로세스의 PCB가 생성되면서 메인 메모리에 적재되어 실행 준비를 마친 상태이다. 이때 fork(), exec() 함수를 통해 생성이 된다.
@@ -165,7 +165,7 @@ printf함수의 원형만 복사를 해온거지 구현이 되어있는 것이 �
 ### 프로세스 상태 변화에 따른 용어
 > - Dispatch(준비 -> 실행) : 준비 상태에 있는 여러 프로세스 중 프로세스를 선정하여 CPU를 할당하는 시점
 > - Timer Run Out(Interrupt, 할당 시간 종료, 실행 -> 준비) : 할당된 시간만큼 CPU를 사용하고 준비 상태로 변하는 시점, 상태 변이 원인이 외부에 있어 외부 인터럽트에 의해 할당 시간이 종료
-> - I/O 발생(실행 -> 대기) : 프로세스가 CPU 사용 중에 I/O 행위가 필요하여 대기 상태로 이동하는 시점
+> - Block(I/O Request, 실행 -> 대기) : 실행중이던 프로세스가 외부 요인에 의해서 자원을 빼앗기는 상태
 > - Wake up(대기 -> 준비) : I/O 작업이 완료되거나 자원이 할당되어 다시 준비 상태로 이동하는 시점
 > - Suspended(Swap Out, 대기 -> 지연준비) : 준비/대기 상태에서 기억 장치를 반납하고 지연 준비 상태로 전이
 > - Resume(Swap-In 지연 준비 -> 대기) : 지연 준비/지연 대기 상태에서 기억 장치를 할당받아 준비(대기) 상태로 전이
@@ -230,3 +230,4 @@ printf함수의 원형만 복사를 해온거지 구현이 되어있는 것이 �
 - https://structuring.tistory.com/131(운영체제)
 - https://many258.github.io/study/os-process/(프로세스 상태 관련)
 - https://zangzangs.tistory.com/107(프로세스 메모리 영역 관련)
+- http://itnovice1.blogspot.com/2019/08/blog-post_64.html(프로세스 상태 관련)
