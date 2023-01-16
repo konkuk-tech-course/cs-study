@@ -14,7 +14,7 @@
 - 프로세서가 효율적으로 메인 메모리를 사용할 때, 프로그램과 정보들이 저장되는 저장소이다.
 - 메인 메모리는 프로세서(Processor)과 연관되어 있어서 processor에서 정보나 지시사항을 넣고 빼는것은 매우 빠르다.
 - 메인 메모리는 RAM으로도 불린다. 휘발성이고, Power 공급이 안되면 데이터를 잃는다
-![img.png](img.png)
+![img.png](img/img.png)
 
 ### Memory Management란 무엇인가?
 - 운영체제는 메모리 일부에 상주하고, 나머지는 여러 프로세스에 의해서 사용된다.
@@ -63,14 +63,14 @@
 - swapping의 주요 부분은 전송된 시간이며, 총 시간은 스와핑된 메모리의 양에 정비례한다.
 - swapping은 roll-out과 roll-in 이라고도 하는데, 이는 우선순위가 높은 프로세스가 도착해 서비스를 원할때, memory manager는 우선순위가 낮은 프로세스를 교체한 다음 우선 순위가 높은 프로세스를 로드하고 실행할 수 있기 때문이다.
 - 우선순위가 높은 일이 끝나고 난 다음, 우선순위가 낮은 프로세스가 메모리에 swapped back되어 실행 프로세스가 계쏙될 수 있다.
-![swapping in memory management](img_1.png)
+![swapping in memory management](img/img_1.png)
 
 
 ### monoprogramming으로 memory management(Swapping 없이 memeory management)
 - 가장 간단한 메모리 관리 방법이다. 메모리는 두가지 섹션으로 나뉜다.
   1. 운영체제
   2. 유저 프로그램
-  ![Monoprogramming_memory_management](img_2.png)
+  ![Monoprogramming_memory_management](img/img_2.png)
 - 이 접근 방식에서 운영 체제는 사용자 프로그램의 할당에 사용할 수 있는 첫번째와 마지막 위치를 추적한다.
 - 운영체제는 bottom이나 top에 로드 된다.
 - 인터럽트 벡터는 종종 낮은 메모리에 로드되기 때문에 운영체제를 낮은 메모리에 로드하는 것이 좋다.
@@ -85,13 +85,13 @@
 - 각 파티션은 `contiguous memory`의 block이다.
 - 메모리는 고정된 수의 파티션으로 분할 된다.
 - 각 파티션은 고정된 크기다. (fixed size)
-![fixed_size_partitioning](img_3.png)
+![fixed_size_partitioning](img/img_3.png)
 - 위 그림에서 볼수 있듯, 메모리는 다섯 개의 구역으로 파티션 되어 있다. 
 - 영역은 시스템 업데이트 용으로 보존되고, 나머지 네 개의 파티션들은 사용자 프로그램을 위해 남아 있다.
 
 ### Partition Table
 - 일단 파티션이 정의되면, 운영체제는 `파티션 테이블`이라는 데이터 구조를 통해서 메모리 파티션의 상태를 추적한다.
-![sample_partition_table](img_4.png)
+![sample_partition_table](img/img_4.png)
 
 ### 논리 주소 vs 물리 주소
 - 논리 주소는 물리 주소로 mapping되는데, 이는 `base register`라는 하드웨어의 도움으로 매핑된다.
@@ -103,7 +103,7 @@
 - 메모리는 대부분 두개의 파티션으로 나뉘는데, 하나는 **운영체제 상주용**이고, 하나는 **유저 프로세스용**이다.
 - 일반적으로 메모리에 동시 상주하기 위해서는 여러 유저 프로세스가 필요하기 때문에, 메모리로 가져오는 것을 기다리는 input queue에 있는 프로세스에 사용 가능한 메모리 할당 방법을 고려해야 한다.
 - 인접 메모리 할당에서, 각 프로세스는 single contiguous segement of memory에 포함된다.
-![contiguous_memory_allocation](img_5.png)
+![contiguous_memory_allocation](img/img_5.png)
 
 ### 메모리 할당
 - 적절한 메모리 활용을 위해서는 메모리 할당이 효율적인 방식으로 할당 되어야 한다.
@@ -122,16 +122,16 @@
    - 메모리를 할당하는 동안 dynamic storage allocation 문제가 발생하는데, 이는 사용가능한 hole의 목록에서 크기가 n인 요청을 만족시키는 방법과 관련이 있다.
    - 이 문제를 위해 몇 solution이 있다.
    1. first fit: 첫 번째 사용가능한 hole은 할당된 프로세스의 요구사항을 충족한다.
-      - ![first_fit](img_6.png)
+      - ![first_fit](img/img_6.png)
       - 여기서 처음 맞는 hole에 할당되는 것이다.
    2. Best Fit: 프로세스의 요구사항에 충분히 큰 가장 작은 hole을 할당한다.
       - 따라서 size에 따라 정렬되어 있지 않은 한, 전체 리스트를 탐색한다.
-      - ![best_fit](img_7.png)
+      - ![best_fit](img/img_7.png)
       - 전체 목록을 탐색하고 적절한 hoeld르 찾아 할당한다.
       - 이 방법에서 메모리 사용률은 다른 메모리 할당 기술이 비해 최대이다.
    3. Worst fit: 프로세스를 가장 큰 hole을 할당한다.
       - 이 방법은 가장 큰 hole을 생성한다.
-      - ![worst_fit](img_8.png)
+      - ![worst_fit](img/img_8.png)
       - 위의 예에서, process A가 가장 큰 hole인 60kb에 할당된다.
       - 비효율적인 메모리 사용률이 worst fit의 주요 문제이다
 
