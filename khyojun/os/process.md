@@ -33,6 +33,8 @@ p.159 의 그림을 참고하자.
 #define MAX 100
 void main()
 {
+  int n=0;
+  scanf("%d", &n);
   printf("Hello World! %d", MAX);
 
 }
@@ -244,10 +246,10 @@ printf함수의 원형만 복사를 해온거지 구현이 되어있는 것이 �
 
 
 ### 출처
-- https://www.charlezz.com/?p=44590(프로세스 관련)
-- https://bradbury.tistory.com/226#:~:text=%EC%BB%B4%ED%8C%8C%EC%9D%BC%20%EA%B3%BC%EC%A0%95%EC%9D%80%204%EA%B0%80%EC%A7%80,%EB%94%B0%EB%A1%9C%20%EB%82%98%EB%88%A0%EC%84%9C%20%EB%B6%80%EB%A5%B4%EA%B8%B0%EB%8F%84%20%ED%95%9C%EB%8B%A4.(컴파일 관련)
-- https://blog.potados.com/dev/things-happend-after-fork/(fork() 관련)
-- https://structuring.tistory.com/131(운영체제)
-- https://many258.github.io/study/os-process/(프로세스 상태 관련)
-- https://zangzangs.tistory.com/107(프로세스 메모리 영역 관련)
-- http://itnovice1.blogspot.com/2019/08/blog-post_64.html(프로세스 상태 관련)
+- [프로세스 관련](https://www.charlezz.com/?p=44590)
+- [컴파일 관련](https://bradbury.tistory.com/226#:~:text=%EC%BB%B4%ED%8C%8C%EC%9D%BC%20%EA%B3%BC%EC%A0%95%EC%9D%80%204%EA%B0%80%EC%A7%80,%EB%94%B0%EB%A1%9C%20%EB%82%98%EB%88%A0%EC%84%9C%20%EB%B6%80%EB%A5%B4%EA%B8%B0%EB%8F%84%20%ED%95%9C%EB%8B%A4.)
+- [fork() 관련](https://blog.potados.com/dev/things-happend-after-fork/)
+- [운영체제](https://structuring.tistory.com/131)
+- [프로세스 상태 관련](https://many258.github.io/study/os-process/)
+- [프로세스 메모리 영역 관련](https://zangzangs.tistory.com/107)
+- [프로세스 상태 관련](http://itnovice1.blogspot.com/2019/08/blog-post_64.html)
