@@ -153,3 +153,13 @@ OS의 커널에 메시지를 저장하기 위한 연결 목록이 있고 "메시
 |  통신 단위   |      Stream       |       Stream       |        구조체         |        구조체         |        페이지        |      Stream       | 
 |  통신 방향   |       단 방향        |        양 방향        |    단 방향        |        양 방향        |       양 방향        |       양 방향        |
 | 통신 가능 범위 |      동일 시스템       |       동일 시스템       |동일 시스템       |       동일 시스템       |동일 시스템       |     동일+외부 시스템     |
+
+
+
+### 출처
+- https://dar0m.tistory.com/233
+- https://www.scaler.com/topics/operating-system/inter-process-communication-in-os/
+- https://d2.naver.com/helloworld/2922312
+- https://thiluxan.medium.com/how-web-browsers-use-process-threads-a5e560d42037
+- https://doitnow-man.tistory.com/110
+- https://www.tutorialspoint.com/what-is-a-multiprocessing-operating-system
