@@ -51,3 +51,8 @@ Context-Switching에는 3가지 주요 트리거(일어나는 상황)가 있는�
 - 자식 프로세스가 Fork를 할 때 : 3번의 경우가 될 수 있다.
 
 
+### 출처 
+- https://gaeunhan.tistory.com/70
+- https://www.tutorialspoint.com/what-is-context-switching-in-operating-system#
+- https://jeong-pro.tistory.com/93
+- https://afteracademy.com/blog/what-is-context-switching-in-operating-system/
