@@ -24,9 +24,7 @@
 
 어떤 프로세스들이 작동하고 있는지 보기 위해서 **Chrome 기준  Chrome 맞춤설정 및 제어 버튼을 클릭하고 메뉴에서 도구 더보기 > 작업 관리자를 선택한다.** 그러면 현재 실행 중인 프로세스 목록과 사용 중인 CPU, 메모리의 양이 표시된 창이 열린다.
 
-
 크롬의 예제를 통해 보게되면 최근까지 Chrome은 탭마다 프로세스를 할당했다. 이제는 (iframe에 있는 사이트 포함)마다 프로세스를 할당한다고 한다.
-
 
 그러면 이런 프로세스들끼리는 각각의 맡은 역할이 있는데 서로 필요한 정보가 있기 위해서는 통신을 해야하는데 어떻게 통신할까?
 
@@ -157,9 +155,9 @@ OS의 커널에 메시지를 저장하기 위한 연결 목록이 있고 "메시
 
 
 ### 출처
-- https://dar0m.tistory.com/233
-- https://www.scaler.com/topics/operating-system/inter-process-communication-in-os/
-- https://d2.naver.com/helloworld/2922312
-- https://thiluxan.medium.com/how-web-browsers-use-process-threads-a5e560d42037
-- https://doitnow-man.tistory.com/110
-- https://www.tutorialspoint.com/what-is-a-multiprocessing-operating-system
+- [IPC관련](https://dar0m.tistory.com/233)
+- [IPC관련2](https://www.scaler.com/topics/operating-system/inter-process-communication-in-os/)
+- [브라우저 프로세스](https://d2.naver.com/helloworld/2922312)
+- [웹브라우저 스레드](https://thiluxan.medium.com/how-web-browsers-use-process-threads-a5e560d42037)
+- [IPC관련3](https://doitnow-man.tistory.com/110)
+- [멀티프로세싱](https://www.tutorialspoint.com/what-is-a-multiprocessing-operating-system)
