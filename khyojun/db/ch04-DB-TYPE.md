@@ -140,8 +140,59 @@ NoSQL은 저장방식에 따라 사용하는 DBMS의 종류가 다르다. 각각
  
 
 
+### MongoDB(documented)
 
-### MongoDB(documented), Neo4j(graph), Hbase(columnor) 관련 특징 추가하기
+- Documented Database
+  - HTML과 같은 특정 형식의 태그 구조를 의미하며, mongoDB는 JSON 형식으로 데이터를 관리해서 NoSQL 데이터베이스 중 도큐먼트 데이터베이스로 분류된다. 
+  - mongoDB는 데이터를 저장하는 데이터 단위는 document로 구성된다.
+  - 필드와 값의 쌍으로 구성이 된다, 관계를 갖는 데이터를 중첩 도큐먼트와 배열을 사용해서 1개의 도큐먼트로 표현 가능
+  - 데이터 입출력 시에는 JSON 형식의 도큐먼트를 사용하나 데이터베이스 저장 시에는 이진 포맷으로 인코딩한 BSON(Binary JSON) 형식의 도큐먼트로 변환되어 저장
+
+- 유연한 스키마 
+  - 스키마의 선언 없이 필드의 추가와 삭제가 자유로운 구조이다.
+  - 같은 필드라도 데이터 타입이 다를 수 있는 비정형 스키마이다.
+
+- 비 관계형 DB
+  - mongoDB는 조인을 지원하지 않기 때문에 임베디드 방식의 도큐먼트 구조를 사용하거나 레퍼런스 방식의 도큐먼트 구조를 사용한 후 애플리케이션에서 조인해야 한다.
+
+- 비 트랜잭션
+  - 트랜잭션을 지원하지 않는다.
+
+- JSON 및 BSON
+  - 데이터 입출력 시에는 JSON 형식
+    - {"hello" : "world"}
+  - 데이터 저장 시에는 BSON 형식을 사용한다.
+    - \*16\x00\x00hello\x00\x00\x00world\x00\
+  - BSON으로 저장을 하게 되면 컴퓨터가 쉽게 이해해 속도가 빠르다.
+  - JSON으로 파싱할 때 검색 속도가 느리다.
+
+
+### Neo4j(Graph)
+
+- Neo4j는 그래프 데이터를 저장하고 관리하기 위한 그래프 DB 이다. Neo4j의 주요 특징으로는 다음과 같은 것들이 있다.
+-  Neo4j는 Neo4j사가 개발한 그래프 데이터베이스 관리 시스템
+-  Neo4j 개발자들은 네이티브 그래프 저장 및 처리 기능을 갖춘 ACID를 준수하는 트랜잭셔널 데이터베이스로 기술하고 있음
+-  DB-Engines ranking에 따르면 가장 대중적인 그래프 데이터베이스
+-  Neo4j는 GPL3 라이선스의 오픈 소스 커뮤니티 에디션으로 이용이 가능(온라인 백업과 고가용 확장 기능(AGPL 라이선스)과 더불어)
+-  Neo4j는 이러한 확장 기능들이 포함된 Neo4j를 클로즈드 소스 상용 라이선스로 허가
+-  자바로 구현되어 있으며 트랜잭셔널 HTTP 엔드포인트를 경유하거나 바이너리 볼트(bolt) 프로토콜을 통해 Cypher Query Language를 사용하여 다른 언어(Python, Java, GoLang 등)로 작성된 소프트웨어로부터 접근이 가능
+- 빅데이터 전용은 아니다.
+
+
+
+### Cassandra(Column형)
+- 아파치 카산드라(Apache Cassandra)는 자유 오픈 소스 분산형 노에스큐엘(NoSQL) 데이터베이스 관리 시스템(DBMS)의 하나로, 단일 장애 점 없이 고성능을 제공하면서 수많은 서버 간의 대용량의 데이터를 관리하기 위해 설계되었다.
+- 카산드라는 여러 데이터센터에 걸쳐 클러스터를 지원하며 마스터리스(masterless) 비동기 레플리케이션을 통해 모든 클라이언트에 대한 낮은 레이턴시 운영을 허용하며, 성능 면에서 높은 가치를 보인다.
+- 분산화와 집중화
+  - 카산드라는 분산형이라 여러 머신에서 동작하지만, 사용자에게는 통합된 하나로 보인다.
+- 탄력적인 확장성
+  - scale out의 특별한 속성이다. 클러스터의 중단 없이 규모를 확대하거나 축소할 수 있다.
+- 고가용성과 결함 허용
+  - 시스템을 중단하지 않고 장애가 발생한 노드를 교체 할 수 있고, 다중 데이터 센터에 데이터를 복제해 로컬 성능을 개선할 수 있다.
+  - 여러 자연재해가 일어나도 다중 데이터 센터에 데이터를 복제해서 서비스 중단을 예방할 수 있다.
+- 높은 진입장벽을 가진다.
+- 복잡한 조건의 검색이 불가능하다.
+- 데이터 입력시 자동화 처리가 어렵다.
 
 
 
@@ -153,3 +204,8 @@ NoSQL은 저장방식에 따라 사용하는 DBMS의 종류가 다르다. 각각
 - https://dev.mysql.com/doc
 - https://cloud.google.com/learn/what-is-a-relational-database?hl=ko#section-4
 - https://www.tutorialspoint.com/difference-between-nosql-and-rdbms
+- https://meetup.nhncloud.com/posts/275#:~:text=mongoDB%EB%8A%94%20%EB%B3%84%EB%8F%84%EC%9D%98%20%EC%8A%A4%ED%82%A4%EB%A7%88,%EB%90%98%EB%8A%94%20%EA%B0%80%EC%9E%A5%20%ED%81%B0%20%ED%8A%B9%EC%A7%95%EC%9E%85%EB%8B%88%EB%8B%A4.
+- https://goyunji.tistory.com/95
+- https://newstellar.tistory.com/30
+- https://1004jonghee.tistory.com/entry/Neo4j%EB%9E%80
+- https://cassandra.apache.org/_/index.html
