@@ -8,7 +8,6 @@
 ```mysql
 CREATE INDEX 인덱스 이름 ON 테이블명 (attributes)
 CREATE UNIQUE INDEX 인덱스 이름 ON 테이블명 (attributes)
-
 ```
 
 위에 1번째는 속성이 1개일 경우 2번째의 경우에는 중복 없는 유니크한 속성을 지정할 때 들어가게 하는 것이다. 
@@ -22,7 +21,6 @@ CREATE TABLE PLAYER{
     INDEX 인덱스 이름 (속성)
     
     }
-
 ```
 
 어떤 인덱스가 있는지 확인하고 싶으면 아래 구문을 사용하면 된다.
